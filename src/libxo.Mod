@@ -1,6 +1,7 @@
 MODULE libxo;
 
-IMPORT SYSTEM;
+IMPORT
+  SYSTEM;
 
 CONST
   xoStyleText*     = 0;
@@ -59,12 +60,12 @@ BEGIN
   handle := xocreate(style, flags);
 END xoCreate;
 
-PROCEDURE -xoemit(fmt: ARRAY OF CHAR)
-"xo_emit(fmt)";
+PROCEDURE -xoemit(VAR fmt: ARRAY OF CHAR; VAR var: ARRAY OF CHAR)
+"xo_emit(fmt, var)";
 
-PROCEDURE xoEmit*(fmt: ARRAY OF CHAR);
-(* TODO *)
+PROCEDURE xoEmit*(format: ARRAY OF CHAR; value: ARRAY OF CHAR);
 BEGIN
+  xoemit(format, value)
 END xoEmit;
 
 END libxo.

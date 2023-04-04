@@ -79,5 +79,5 @@ main(){
   }
 
   printf("\n\n\n");
-  xo_emit("{:jails/%d}\n", 10);
+  xo_emit("{:jails}\n", "jails");
 };
